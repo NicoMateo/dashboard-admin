@@ -1,0 +1,172 @@
+====================================================================
+  DASHBOARD DE ADMINISTRACIÓN PROFESIONAL EN PHP
+  Guía Rápida de Instalación
+====================================================================
+
+REQUISITOS PREVIOS:
+-------------------
+✓ XAMPP instalado (Apache + MySQL + PHP)
+✓ Navegador web moderno (Chrome, Firefox, Edge)
+
+PASOS DE INSTALACIÓN:
+--------------------
+
+1. INICIAR SERVICIOS
+   - Abrir el Panel de Control de XAMPP
+   - Iniciar Apache (botón "Start")
+   - Iniciar MySQL (botón "Start")
+
+2. CREAR LA BASE DE DATOS
+   - Abrir phpMyAdmin: http://localhost/phpmyadmin
+   - Hacer clic en "Nueva" base de datos
+   - Nombre: dashboard_admin
+   - Cotejamiento: utf8mb4_unicode_ci
+   - Hacer clic en "Crear"
+
+3. IMPORTAR LAS TABLAS
+   - Seleccionar la base de datos "dashboard_admin"
+   - Hacer clic en la pestaña "Importar"
+   - Hacer clic en "Seleccionar archivo"
+   - Buscar y seleccionar el archivo: database.sql
+   - Hacer clic en "Continuar"
+   - Esperar mensaje de éxito
+
+4. ACCEDER AL SISTEMA
+   - Abrir el navegador
+   - Ir a: http://localhost/dashboard-admin/
+   - Aparecerá la pantalla de login
+
+5. INICIAR SESIÓN
+   Usar cualquiera de estas credenciales:
+
+   ADMINISTRADOR (acceso completo):
+   Email: admin@dashboard.com
+   Password: admin123
+
+   MODERADOR (crear/editar usuarios):
+   Email: moderador@dashboard.com
+   Password: admin123
+
+   USUARIO (solo ver y editar perfil):
+   Email: usuario@dashboard.com
+   Password: admin123
+
+====================================================================
+
+SOLUCIÓN DE PROBLEMAS:
+----------------------
+
+❌ Error: "Could not connect to MySQL"
+   → Verificar que MySQL esté corriendo en XAMPP
+   → Verificar puerto (por defecto 3306)
+
+❌ Error: "Database not found"
+   → Crear la base de datos "dashboard_admin" en phpMyAdmin
+   → Importar el archivo database.sql
+
+❌ La página no carga correctamente
+   → Verificar que Apache esté corriendo
+   → Verificar la URL: http://localhost/dashboard-admin/
+   → Limpiar caché del navegador (Ctrl + F5)
+
+❌ No se ven los estilos CSS
+   → Verificar que exista la carpeta: assets/css/
+   → Verificar que exista el archivo: assets/css/style.css
+   → Limpiar caché del navegador
+
+❌ Error: "Access denied for user 'root'"
+   → Editar config.php
+   → Ajustar credenciales de MySQL si son diferentes
+
+====================================================================
+
+ESTRUCTURA DE ARCHIVOS:
+-----------------------
+
+dashboard-admin/
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       └── main.js
+├── includes/
+│   ├── header.php
+│   ├── sidebar.php
+│   └── footer.php
+├── config.php              ← Configuración de BD
+├── index.php               ← Página de login
+├── dashboard.php           ← Panel principal
+├── usuarios.php            ← Gestión de usuarios
+├── perfil.php              ← Editar perfil
+├── logout.php              ← Cerrar sesión
+├── database.sql            ← Script de BD
+├── README.md               ← Documentación completa
+├── INSTALACION.txt         ← Este archivo
+├── .htaccess               ← Configuración Apache
+└── .gitignore              ← Git ignore
+
+====================================================================
+
+FUNCIONALIDADES PRINCIPALES:
+----------------------------
+
+✓ Sistema de login seguro con sesiones
+✓ 3 niveles de roles (Admin, Moderador, Usuario)
+✓ Dashboard con estadísticas en tiempo real
+✓ Gráficos interactivos (Chart.js)
+✓ CRUD completo de usuarios
+✓ Búsqueda y paginación
+✓ Registro de actividades (log)
+✓ Diseño responsive (móvil, tablet, escritorio)
+✓ Seguridad: PDO, prepared statements, password_hash()
+
+====================================================================
+
+CARACTERÍSTICAS DE SEGURIDAD:
+-----------------------------
+
+✓ Contraseñas encriptadas con password_hash()
+✓ PDO con prepared statements (anti SQL injection)
+✓ Validación de sesiones en cada página
+✓ Validación de roles antes de acciones
+✓ Sanitización de datos de entrada
+✓ HttpOnly en cookies de sesión
+✓ Protección XSS
+✓ Protección clickjacking
+
+====================================================================
+
+URLs IMPORTANTES:
+-----------------
+
+Login:           http://localhost/dashboard-admin/
+Dashboard:       http://localhost/dashboard-admin/dashboard.php
+Usuarios:        http://localhost/dashboard-admin/usuarios.php
+Perfil:          http://localhost/dashboard-admin/perfil.php
+phpMyAdmin:      http://localhost/phpmyadmin
+
+====================================================================
+
+SIGUIENTES PASOS:
+-----------------
+
+1. Iniciar sesión con las credenciales de prueba
+2. Explorar el dashboard y estadísticas
+3. Probar la gestión de usuarios (crear, editar, eliminar)
+4. Editar tu perfil y cambiar contraseña
+5. Revisar el registro de actividades
+6. Personalizar los colores en assets/css/style.css
+7. Crear tus propios usuarios y eliminar los de prueba
+
+====================================================================
+
+SOPORTE Y DOCUMENTACIÓN:
+------------------------
+
+Para más información, consultar README.md
+
+====================================================================
+
+¡Listo para usar! Disfruta tu nuevo Dashboard de Administración.
+
+====================================================================
