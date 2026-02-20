@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper"> 
         <!-- Sidebar -->
         <?php include 'includes/sidebar.php'; ?>
 

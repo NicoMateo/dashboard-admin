@@ -1,14 +1,14 @@
 <?php
-require_once 'config.php';
+require_once 'config.php'; // Configuración de la base de datos y funciones comunes
 verificarSesion();
 
-$pageTitle = 'Dashboard';
+$pageTitle = 'Dashboard'; // Título de la página para el header
 
 // Obtener estadísticas
 try {
     // Total de usuarios
     $totalUsuarios = $pdo->query("SELECT COUNT(*) as total FROM usuarios")->fetchColumn();
-
+    
     // Usuarios activos
     $usuariosActivos = $pdo->query("SELECT COUNT(*) as total FROM usuarios WHERE activo = 1")->fetchColumn();
 
